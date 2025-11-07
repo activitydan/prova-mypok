@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>MyPoké – Fresh & Healthy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS ESTERNO -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">My <span>Poké</span></div>
+
+    <div class="menu-toggle"><span></span><span></span><span></span></div>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#crea">Crea Poké</a></li>
+      <li><a href="#foto">Foto</a></li>
+      <li><a href="#contatti">Contatti</a></li>
+    </ul>
+
+    <!-- ✅ LOGIN GOOGLE -->
+    <div class="login-area">
+      <button id="googleLoginBtn" class="btn google-btn">Accedi con Google</button>
+<span id="userStatus"></span>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div>
+      <h1>Poké freschissime.<br>Hawaii vibes 🌺</h1>
+      <div class="cta">
+        <a href="#menu" class="btn">Vedi Menu</a>
+        <a href="#crea" class="btn-outline">Crea la tua Poké</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO -->
+  <section class="promo-section">
+    <h2>🔥 Oggi -10% sulle bowl al tonno! 🎣</h2>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="menu-section">
+    <h2>Le nostre bowl ⭐</h2>
+    <section id="galleria-poke" class="gallery-poke">
+      <h2>Guarda le nostre Poké 😍</h2>
+
+      <div class="poke-grid">
+        <img src="images/poke-1.jpg" class="poke-photo" alt="Poké Bowl assortite">
+        <img src="images/poke-2.jpg" class="poke-photo" alt="Poké Protein Mix">
+        <img src="images/poke-3.jpg" class="poke-photo" alt="Poké Mais e Cavolo viola">
+        <img src="images/poke-4.jpg" class="poke-photo" alt="Poké Edamame e Cipolla">
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img">
+      </div>
+    </section>
+
+    <div class="menu-container">
+      <div class="menu-item">
+        <img src="images/poke1.jpg" alt="Salmon Lover">
+        <h3>Salmon Lover</h3>
+        <div class="price">€10,90</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/poke2.jpg" alt="Aloha Tuna">
+        <h3>Aloha Tuna</h3>
+        <div class="price">€11,40</div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/poke3.jpg" alt="Veggie Dream">
+        <h3>Veggie Dream</h3>
+        <div class="price">€9,90</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTO LOCALE -->
+  <section id="foto" class="gallery-section">
+    <h2>Il nostro locale 📸</h2>
+
+    <div class="gallery-main">
+      <img id="mainPhoto" src="images/local-main.jpg" alt="Locale MyPoké">
+    </div>
+
+    <div class="gallery-thumbs">
+      <img src="images/local1.jpg" data-full="images/local1.jpg">
+      <img src="images/local2.jpg" data-full="images/local2.jpg">
+      <img src="images/local3.jpg" data-full="images/local3.jpg">
+      <img src="images/local4.jpg" data-full="images/local4.jpg">
+    </div>
+  </section>
+
+  <!-- CREA LA TUA POKÉ -->
+  <section id="crea" class="crea-section">
+    <h2>Crea la tua Poké 🥑</h2>
+
+    <div class="steps">
+      <div class="step active">Base</div>
+      <div class="step">Proteina</div>
+      <div class="step">Topping</div>
+      <div class="step">Salsa</div>
+      <div class="step">Riepilogo</div>
+    </div>
+
+    <form id="pokeForm">
+      <div class="step-box" id="step-1">
+        <h3>Base</h3>
+        <div class="options">
+          <label><input type="radio" name="base" value="Riso Sushi" data-price="2.50">Riso Sushi +€2,50</label>
+          <label><input type="radio" name="base" value="Riso Integrale" data-price="2.50">Riso Integrale +€2,50</label>
+          <label><input type="radio" name="base" value="Quinoa" data-price="3.00">Quinoa +€3,00</label>
+          <label><input type="radio" name="base" value="Insalata" data-price="2.00">Insalata +€2,00</label>
+        </div>
+        <button type="button" class="btn next">Avanti</button>
+      </div>
+
+      <div class="step-box" id="step-2">
+        <h3>Proteina</h3>
+        <div class="options">
+          <label><input type="radio" name="proteina" value="Salmone" data-price="5.00">Salmone +€5</label>
+          <label><input type="radio" name="proteina" value="Tonno" data-price="5.50">Tonno +€5,50</label>
+          <label><input type="radio" name="proteina" value="Pollo" data-price="4.00">Pollo +€4</label>
+          <label><input type="radio" name="proteina" value="Tofu" data-price="3.50">Tofu +€3,50</label>
+        </div>
+        <button type="button" class="btn prev">Indietro</button>
+        <button type="button" class="btn next">Avanti</button>
+      </div>
+
+      <div class="step-box" id="step-3">
+        <h3>Topping (max 4 inclusi)</h3>
+        <p>Extra: +€0,80 cad.</p>
+        <div class="options toppings">
+          <label><input type="checkbox" value="Avocado">Avocado</label>
+          <label><input type="checkbox" value="Edamame">Edamame</label>
+          <label><input type="checkbox" value="Mango">Mango</label>
+          <label><input type="checkbox" value="Cipolla Rossa">Cipolla</label>
+          <label><input type="checkbox" value="Mais">Mais</label>
+          <label><input type="checkbox" value="Cavolo Viola">Cavolo Viola</label>
+          <label><input type="checkbox" value="Alghe Wakame">Wakame</label>
+          <label><input type="checkbox" value="Sesamo">Sesamo</label>
+        </div>
+        <button type="button" class="btn prev">Indietro</button>
+        <button type="button" class="btn next">Avanti</button>
+      </div>
+
+      <div class="step-box" id="step-4">
+        <h3>Salsa</h3>
+        <select id="salsa">
+          <option>Ponzu</option>
+          <option>Spicy Mayo</option>
+          <option>Teriyaki</option>
+          <option>Tahina</option>
+        </select>
+        <button type="button" class="btn prev">Indietro</button>
+        <button type="button" class="btn next">Avanti</button>
+      </div>
+
+      <div class="step-box" id="step-5">
+        <h3>Riepilogo</h3>
+        <div id="pokeSummary"></div>
+        <div class="total-box">
+          Totale: <strong id="totale">€0,00</strong>
+        </div>
+        <button type="button" class="btn prev">Indietro</button>
+        <button type="button" class="btn addCart">Aggiungi al carrello</button>
+      </div>
+
+    </form>
+  </section>
+
+  <!-- CARRELLO -->
+  <section id="carrello" class="cart-section hidden">
+    <h2>Carrello 🛒</h2>
+    <div id="cartItems"></div>
+    <div class="total-box final">
+      Totale Finale: <strong id="cartTotal">€0,00</strong>
+    </div>
+    <a id="waOrder" class="btn" target="_blank">Completa ordine su WhatsApp</a>
+  </section>
+
+  <!-- RECENSIONI -->
+  <section class="reviews">
+    <h2>Cosa dicono i nostri clienti ⭐</h2>
+    <div class="review-box">⭐⭐⭐⭐⭐ “Poké buonissima e locale super instagrammabile!”</div>
+    <div class="review-box">⭐⭐⭐⭐⭐ “Ingredienti freschi e personale gentile!”</div>
+  </section>
+
+  <!-- MAPPA -->
+  <section id="mappa" class="map-section">
+    <h2>Dove siamo 📍</h2>
+    <p>Via Esempio 12 — Ragusa</p>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d757.3273!2d14.7300!3d36.9250!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1311e3ffa0000001%3AMyPokeRagusa!5e0!3m2!1sit!2sit!4v000000000"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      width="100%" height="350">
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 MyPoké – Fresh & Healthy
+  </footer>
+
+  <!-- ✅ SCRIPT -->
+  <script type="module" defer src="script.js"></script>
+
+</body>
+</html>

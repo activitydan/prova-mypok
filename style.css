@@ -1,0 +1,229 @@
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"Poppins",sans-serif;
+  background:#0b0c0e;
+  color:#fff;
+}
+
+/* COLORI BRAND */
+:root{
+  --neon:#e646ff;
+  --green:#18f2a0;
+}
+
+/* HEADER */
+header{
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(12px);
+  position:sticky;top:0;z-index:1000;
+  padding:1rem 2rem;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.logo{
+  font-size:1.9rem;font-weight:900;color:var(--neon);
+  text-transform:uppercase;
+  text-shadow:0 0 15px var(--neon),0 0 45px var(--neon);
+}
+.logo span{color:white;}
+.nav-links{list-style:none;display:flex;gap:2rem;}
+.nav-links a{
+  color:white;text-decoration:none;
+  font-weight:600;transition:.2s;
+}
+.nav-links a:hover,
+.nav-links .active{
+  color:var(--green);
+  text-shadow:0 0 10px var(--green);
+}
+
+/* BURGER MENU */
+.menu-toggle{display:none;cursor:pointer;}
+.menu-toggle span{
+  display:block;width:26px;height:3px;margin:4px;
+  background:white;border-radius:3px;
+}
+
+/* HERO */
+.hero{
+  min-height:70vh;text-align:center;
+  display:flex;justify-content:center;align-items:center;
+  background:url('images/hero-poke.jpg') center/cover no-repeat;
+}
+.hero h1{
+  font-size:2.7rem;line-height:1.3;
+  text-shadow:0 0 20px black;
+}
+
+/* BOTTONI */
+.btn,.btn-outline{
+  display:inline-block;text-decoration:none;
+  padding:.85rem 1.6rem;border-radius:35px;
+  font-weight:700;transition:.3s;
+  margin:.6rem;
+}
+.btn{background:var(--neon);color:black;}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 20px var(--neon);}
+.btn-outline{
+  border:2px solid var(--neon);color:var(--neon);
+}
+.btn-outline:hover{background:var(--neon);color:black;}
+
+/* PROMO */
+.promo-section{
+  background:#181a1f;padding:1.8rem 1rem;
+  color:var(--green);text-align:center;font-size:1.25rem;
+}
+
+/* MENU */
+.menu-section{text-align:center;padding:5rem 2rem;}
+.menu-container{
+  margin-top:2rem;
+  display:grid;gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+.menu-item{
+  background:#111318;border-radius:20px;
+  overflow:hidden;transition:.3s;
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+.menu-item:hover{transform:translateY(-6px);}
+.menu-item img{
+  width:100%;height:180px;object-fit:cover;
+}
+.price{
+  color:var(--green);font-weight:900;
+  font-size:1.2rem;margin-bottom:.8rem;
+}
+
+/* CREA POKE */
+.crea-section{text-align:center;padding:5rem 2rem;}
+.steps{
+  display:flex;justify-content:center;
+  gap:1rem;margin-bottom:2rem;
+}
+.step{
+  background:#222;
+  padding:.65rem 1.2rem;
+  border-radius:15px;cursor:pointer;
+}
+.step.active{
+  background:var(--neon);
+  color:black;
+  box-shadow:0 0 15px var(--neon);
+}
+
+/* STEP CONTAINER */
+.step-box{display:none;max-width:600px;margin:0 auto;}
+.options{display:grid;gap:.7rem;margin:1.2rem 0;}
+.options label{cursor:pointer;}
+select{
+  width:100%;padding:.7rem;
+  border-radius:8px;background:#0b0c0e;
+  color:white;border:2px solid var(--neon);
+  margin-top:.5rem;
+}
+input[type=checkbox]{accent-color:var(--green);}
+
+/* RIEPILOGO */
+.total-box{
+  background:black;margin:1rem auto;
+  padding:1rem;border-radius:12px;
+  border:1px solid var(--green);
+  width:fit-content;
+}
+
+/* CARRELLO */
+.cart-section.hidden{display:none;}
+.cart-section{
+  padding:4rem 2rem;
+  text-align:center;background:#111;
+}
+.cart-item{
+  background:#1a1a1a;padding:1rem;margin:.7rem auto;
+  border-radius:12px;
+  border:1px solid var(--neon);
+  max-width:600px;
+}
+.final{font-size:1.4rem;margin-top:1.5rem;}
+
+/* RECENSIONI */
+.reviews{
+  background:#101114;padding:3rem 2rem;text-align:center;
+}
+.review-box{
+  background:#1b1d22;border-radius:20px;
+  padding:1.4rem;margin:1rem auto;
+  max-width:600px;
+  border:1px solid var(--neon);
+}
+
+/* CONTATTI */
+.contact-section{text-align:center;padding:4rem 2rem;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{
+    display:none;
+    position:absolute;top:65px;right:0;width:100%;
+    background:#0b0c0e;padding:1.5rem;
+    gap:1.4rem;flex-direction:column;
+  }
+  .nav-links.active{display:flex;}
+  .menu-toggle{display:block;}
+}
+footer{text-align:center;padding:1.2rem;color:#777;}
+/* GALLERIA POKÉ */
+.gallery-poke {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.gallery-poke h2 {
+  margin-bottom: 2rem;
+}
+
+.poke-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.poke-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,.45);
+}
+
+.poke-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--neon);
+}
+
+/* LIGHTBOX */
+#lightbox {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,.9);
+  display: none; justify-content: center; align-items: center;
+  z-index: 2000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 35px; right: 40px;
+  font-size: 2.6rem;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 0 12px var(--neon);
+}
